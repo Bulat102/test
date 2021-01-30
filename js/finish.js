@@ -1,7 +1,7 @@
 var Finish ={
 	preload : function(){},
 	create: function(){
-		var retryBut = game.add.text(220,340,"  Повтор  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
+		var retryBut = game.add.text(220,340,"  Заново  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
 		var postBut = game.add.text(410,340,"  Опубликовать  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
 		graphics=game.add.graphics(0,0);
 		graphics.lineStyle(0);
@@ -22,7 +22,7 @@ var Finish ={
 	},
 	update: function(){},
 	wallPost: function(){
-		VK.api("wall.post", {"message": String("Мной набрано "+score+this.whatSl()+" в игре Udareniya."), "attachments": "photo-160039023_456239019"});
+		VK.api("wall.post", {"message": String("Мной набрано "+score+this.whatSl()+" в приложении про ударения."), "attachments": "photo-160039023_456239019"});
 	},
 	whatSl: function(){
 		var ret="очко";
