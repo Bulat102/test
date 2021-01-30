@@ -67,7 +67,7 @@ var Finish ={
 					
 					scoresText.text = "Рекорды:\n1 " + score_table;
 					
-					if Boolean(top_place){
+					if (Boolean(top_place)){
 						scoresText.text = scoresText.text+"\n\n Ваш результат "+score+" попал на "+top_place+' место!';
 					}else{
 						scoresText.text = scoresText.text+"\n\n Ваш результат "+score+" не попал в топ(";
