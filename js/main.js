@@ -1,5 +1,5 @@
 var game;
-VK.init(function() {}, function() {}, '5.126');
+VK.init(function() {console.log('sucess')}, function() {console.log('error')}, '5.126');
 window.onload=function(){
 	VK.callMethod("scrollWindow", 90);
 	game = new Phaser.Game(800,600,Phaser.AUTO,'Bash_test');
