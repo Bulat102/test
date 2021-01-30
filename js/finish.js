@@ -67,7 +67,7 @@ var Finish ={
 					console.log('\n');
 					console.log(top_place);
 					
-					scoresText.text = "Рекорды:\n1 " + score_table;
+					scoresText.text = "Рекорды:\n" + score_table;
 					
 					if (Boolean(top_place)){
 						scoresText.text = scoresText.text+"\n\n Ваш результат "+score+" попал на "+top_place+' место!';
