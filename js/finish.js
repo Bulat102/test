@@ -1,15 +1,15 @@
 var Finish ={
 	preload : function(){},
 	create: function(){
-		var retryBut = game.add.text(220,340,"  Заново  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
-		var postBut = game.add.text(410,340,"  Опубликовать  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
+		var retryBut = game.add.text(220,400,"  Заново  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
+		var postBut = game.add.text(410,400,"  Опубликовать  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
 		graphics=game.add.graphics(0,0);
 		graphics.lineStyle(0);
 		graphics.beginFill(0x4869D6,0.5);
 		graphics.drawRect(retryBut.x,retryBut.y-5,retryBut.width,retryBut.height+10);
 		graphics.drawRect(postBut.x,postBut.y-5,postBut.width,postBut.height+10);
 		graphics.endFill();
-		instruction = game.add.text(game.world.width/2,270,
+		instruction = game.add.text(game.world.width/2,330,
 			"Вы набрали\n "+score+this.whatSl(),
 			{font:"bold 28px Arial",fill:'#000000', align:'center'});
 		instruction.anchor.set(0.5,0.5);	
@@ -61,11 +61,7 @@ var Finish ={
 					// вывести результат
 					let score_table = String(xhr.responseText).slice(0,-1);
 					let top_place = Number(String(xhr.responseText).slice(-1)); //выводим топовое место, если получили, если нет то 0
-					console.log(xhr.responseText);
-					console.log('\n');
-					console.log(score_table );
-					console.log('\n');
-					console.log(top_place);
+					//console.log(xhr.responseText);
 					
 					scoresText.text = "Рекорды:\n" + score_table;
 					
