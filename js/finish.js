@@ -59,9 +59,13 @@ var Finish ={
 					alert("Ошибка " + xhr.status + ': ' + xhr.statusText);
 				} else {
 					// вывести результат
-					alert(xhr.responseText);
 					let score_table = String(xhr.responseText).slice(0,-1);
 					let top_place = Number(String(xhr.responseText).slice(-1)); //выводим топовое место, если получили, если нет то 0
+					console.log(xhr.responseText);
+					console.log('\n');
+					console.log(score_table );
+					console.log('\n');
+					console.log(top_place);
 					
 					scoresText.text = "Рекорды:\n1 " + score_table;
 					
