@@ -1,8 +1,8 @@
 var Finish ={
 	preload : function(){},
 	create: function(){
-		var retryBut = game.add.text(220,340,"  зАново  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
-		var postBut = game.add.text(410,340,"  опубликовАть  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
+		var retryBut = game.add.text(220,340,"  Повтор  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
+		var postBut = game.add.text(410,340,"  Опубликовать  ",{font:"bold 24px Arial",fill:'#000000', align:'center'});
 		graphics=game.add.graphics(0,0);
 		graphics.lineStyle(0);
 		graphics.beginFill(0x4869D6,0.5);
