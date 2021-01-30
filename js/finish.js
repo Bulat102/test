@@ -35,11 +35,11 @@ var Finish ={
 		}
 		return String(' '+ret);
 	},
-	setScore: function loadPhones(){
+	setScore: function() {
 			var xhr = new XMLHttpRequest();
 			
-			if name.length>25 {
-				name = name.slice(0,25)
+			if (name.length > 25) {
+				name = name.slice(0,25);
 			}
 			
 			var json = JSON.stringify({
