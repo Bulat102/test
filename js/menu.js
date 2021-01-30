@@ -13,7 +13,7 @@ var Menu={
 		var len = instruction.length;
 		//VK.api("storage.get",{ "key": "top1","global": 1},function(data){score1=data.response;VK.api("storage.get",{ "key": "name1","global": 1},function(data){instruction.text=String(instruction.text+"\nЛидер: "+data.response+" "+score1);});});
 		VK.api("users.get",{},function(data){
-			name=String(data[0].last_name+" "+data[0].first_name);
+			name=String(data.response[0].last_name+" "+data.response[0].first_name);
 			game.input.onDown.add(Menu.startGame,Menu);
 		});
 		instruction.addColor(0x4282D3,len);
