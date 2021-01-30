@@ -20,6 +20,10 @@ var Finish ={
 		postBut.events.onInputDown.add(this.wallPost,this);
 		retryBut.events.onInputDown.add(function(){game.state.start("Game");},this);
 		name=String(data.response.name[0].last_name+" "+data.response.name[0].first_name);
+		let code=String('return{"name":API.users.get()};');
+		VK.api("execute",{"code":code},function(data){
+			name=String(data.response.name[0].last_name+" "+data.response.name[0].first_name);
+		});
 		this.setScore();
 	},
 	update: function(){},
